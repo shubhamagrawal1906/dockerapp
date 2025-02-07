@@ -6,12 +6,12 @@ jobs:
     - steps:
       - checkout
       - setup_remote_docker
-      - run
+      - run:
         name: Install dependencies
         command: |
           apk add --no-cache py-pip=25.0
           pip install docker-compose==1.29.2
-      - run
+      - run:
         name: Run tests
           command: |
             docker-compose up -d
