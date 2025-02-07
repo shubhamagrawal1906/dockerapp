@@ -1,4 +1,4 @@
-version: 2.1  # Use 2.1 for better compatibility
+version: 2  # Use 2.1 for better compatibility
 
 jobs:
   build:
