@@ -1,11 +1,10 @@
 version: 2  # Use 2.1 for better compatibility
-
 jobs:
   build:
     working_directory: /dockerapp
     docker:
       - image: docker:27.5.1-cli # Ensure correct Docker image
-    - steps:
+    steps:
       - checkout
       - setup_remote_docker
       - run:
