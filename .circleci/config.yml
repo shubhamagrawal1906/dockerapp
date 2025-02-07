@@ -1,9 +1,9 @@
-version: 2  # Use 2.1 for better compatibility
+version: 2
 jobs:
   build:
     working_directory: /dockerapp
     docker:
-      - image: docker:17.05.0-ce-git # Ensure correct Docker image
+      - image: docker:17.05.0-ce-git
     steps:
       - checkout
       - setup_remote_docker
@@ -16,4 +16,5 @@ jobs:
         name: Run tests
         command: |
           docker-compose up -d
-          docker-compose run dockerapp python tests.py
+          docker-compose run dockerapp python test.py
+          
